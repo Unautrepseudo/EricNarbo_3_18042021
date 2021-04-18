@@ -34,21 +34,26 @@ h3 {
   font-family: "Shrikhand", sans-serif;
 }
 
-header {
-  height: 60px;
+button, header {
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+header {
+  height: 55px;
   box-shadow: 0px 0px 5px grey;
+}
+header img {
+  transform: scale(0.9);
 }
 
 input {
   border: none;
   width: 100%;
   height: 50px;
-  background: rgba(177, 177, 177, 0.219);
-  font-size: 18px;
+  background: rgba(107, 107, 107, 0.219);
+  font-size: 17px;
 }
 
 ::placeholder {
@@ -56,6 +61,35 @@ input {
   color: #626262;
   font-weight: bold;
   font-family: "Font Awesome 5 Free";
+}
+
+button {
+  margin: auto;
+  border-radius: 30px;
+  color: white;
+  width: 58%;
+  height: 50px;
+  background: linear-gradient(167deg, #ff79da 0%, #9356dc 100%);
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 1px 5px grey;
+}
+
+.hero {
+  background: #f2f2f2;
+  padding-bottom: 50px;
+}
+.hero h1 {
+  text-align: center;
+  font-size: 24px;
+  padding: 40px 40px 0px 40px;
+  font-weight: bold;
+}
+.hero h3 {
+  text-align: center;
+  font-size: 17px;
+  padding: 15px;
+  color: #8b8b8b;
 }
 
 /*# sourceMappingURL=style.css.map */

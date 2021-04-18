@@ -1,9 +1,11 @@
+@use '../utils/placeholders' as *;
+
 header {
-  height: 60px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  //   padding: 5px;
+  @extend %flexcenter;
+  height: 55px;
   box-shadow: 0px 0px 5px grey;
+
+  img {
+    transform: scale(0.9);
+  }
 }
