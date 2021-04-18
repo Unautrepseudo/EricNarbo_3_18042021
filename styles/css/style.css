@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: local("/fonts/Shrikhand-Regular.ttf") format("ttf");
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

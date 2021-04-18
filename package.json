@@ -1,0 +1,14 @@
+{
+  "name": "ericnarbo_3_17042021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/sass/style.scss:./styles/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.10"
+  }
+}
