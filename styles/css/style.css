@@ -49,7 +49,7 @@ header {
   box-shadow: 0px 0px 5px grey;
 }
 header img {
-  transform: scale(0.9);
+  transform: scale(0.6);
 }
 
 input {
@@ -101,6 +101,36 @@ input {
   font-weight: bold;
 }
 
+footer {
+  background: #313030;
+  line-height: 1.9;
+  padding: 21px;
+}
+footer svg {
+  width: 110px;
+}
+footer svg path {
+  fill: white !important;
+}
+footer .row {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 18px;
+}
+footer .row span {
+  padding-right: 10px;
+  font-size: 16px;
+}
+footer .row .fa-hands-helping {
+  transform: rotate(-15deg);
+  font-size: 12px;
+}
+footer a {
+  color: white;
+  font-size: 18px;
+}
+
 button {
   margin: auto;
   border-radius: 30px;
@@ -122,7 +152,7 @@ button {
   position: relative;
   flex-direction: column;
   margin-bottom: 50px;
-  box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
+  box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
 }
 .card .img-container {
   display: flex;

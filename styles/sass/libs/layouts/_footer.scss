@@ -1,0 +1,31 @@
+footer {
+  background: rgb(49, 48, 48);
+  line-height: 1.9;
+  padding: 21px;
+
+  svg {
+    width: 110px;
+    path {
+      fill: white !important;
+    }
+  }
+  .row {
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 18px;
+
+    span {
+      padding-right: 10px;
+      font-size: 16px;
+    }
+    .fa-hands-helping {
+      transform: rotate(-15deg);
+      font-size: 12px;
+    }
+  }
+  a {
+    color: white;
+    font-size: 18px;
+  }
+}
