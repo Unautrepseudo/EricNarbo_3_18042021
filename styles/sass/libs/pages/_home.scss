@@ -1,6 +1,9 @@
 @use '../layouts/header';
 @use '../layouts/form';
+@use '../layouts/steps';
+
 @use '../components/button';
+@use '../components/card';
 
 @use '../utils/variables' as *;
 @use '../utils/placeholders' as *;
@@ -24,4 +27,22 @@
 }
 
 .fonctionnement {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+  }
+}
+
+.restaurants {
+  background: $grey;
+  padding-top: 50px;
+  h2 {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+  }
 }

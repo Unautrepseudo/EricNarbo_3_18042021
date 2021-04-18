@@ -1,0 +1,44 @@
+@use '../utils/variables' as *;
+@use '../utils/placeholders' as *;
+
+.step {
+  @extend %flexcenter;
+  margin-bottom: 20px;
+
+  .number {
+    @extend %flexcenter;
+    transform: translateX(10px);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 5px;
+    background: $primary;
+  }
+  .right-bloc {
+    @extend %flexcenter;
+    justify-content: start;
+    width: 90%;
+    height: 70px;
+    border-radius: 18px;
+    background: $grey;
+    margin-right: 20px;
+    padding-right: 40px;
+
+    box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
+  }
+
+  .icone {
+    padding: 30px;
+
+    padding-left: 35px;
+    color: grey;
+    font-size: 22px;
+  }
+
+  .text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

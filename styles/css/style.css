@@ -16,6 +16,10 @@ li {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
 @font-face {
   font-family: "Roboto";
   src: local("/fonts/Roboto-Regular.ttf") format("ttf");
@@ -34,7 +38,7 @@ h3 {
   font-family: "Shrikhand", sans-serif;
 }
 
-button, header {
+.card .new-tag, button, .step, .step .number, .step .right-bloc, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,6 +67,40 @@ input {
   font-family: "Font Awesome 5 Free";
 }
 
+.step {
+  margin-bottom: 20px;
+}
+.step .number {
+  transform: translateX(10px);
+  font-size: 14px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 5px;
+  background: #9356dc;
+}
+.step .right-bloc {
+  justify-content: start;
+  width: 90%;
+  height: 70px;
+  border-radius: 18px;
+  background: #f2f2f2;
+  margin-right: 20px;
+  padding-right: 40px;
+  box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
+}
+.step .icone {
+  padding: 30px;
+  padding-left: 35px;
+  color: grey;
+  font-size: 22px;
+}
+.step .text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 button {
   margin: auto;
   border-radius: 30px;
@@ -73,6 +111,53 @@ button {
   border: none;
   font-size: 16px;
   box-shadow: 0px 1px 5px grey;
+}
+
+.card {
+  border-radius: 15px;
+  width: 92%;
+  height: 280px;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 50px;
+  box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
+}
+.card .img-container {
+  display: flex;
+  height: 200px;
+}
+.card .img-container img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  object-position: 0% 100%;
+}
+.card .new-tag {
+  position: absolute;
+  color: #2e8b6c;
+  background: #8ed6c1;
+  padding: 7px 18px;
+  font-weight: bold;
+  right: 10px;
+  top: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.card .infos-container {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  border-radius: 0 0 15px 15px;
+  font-size: 18px;
+  padding: 15px 15px 0px 15px;
+  line-height: 1.5;
+  background: white;
+}
+.card .infos-container .icon {
+  font-size: 30px;
+  color: rgba(128, 128, 128, 0.671);
+  padding-right: 10px;
 }
 
 .hero {
@@ -90,6 +175,26 @@ button {
   font-size: 17px;
   padding: 15px;
   color: #8b8b8b;
+}
+
+.fonctionnement {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.fonctionnement h2 {
+  font-size: 24px;
+  padding-left: 10px;
+  padding-bottom: 25px;
+}
+
+.restaurants {
+  background: #f2f2f2;
+  padding-top: 50px;
+}
+.restaurants h2 {
+  font-size: 24px;
+  padding-left: 10px;
+  padding-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

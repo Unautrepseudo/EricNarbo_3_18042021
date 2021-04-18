@@ -1,0 +1,50 @@
+@use '../utils/placeholders' as *;
+
+.card {
+  border-radius: 15px;
+  width: 92%;
+  height: 280px;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 50px;
+  box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
+
+  .img-container {
+    display: flex;
+    height: 200px;
+    img {
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+      object-position: 0% 100%;
+    }
+  }
+  .new-tag {
+    @extend %flexcenter;
+    position: absolute;
+    color: rgb(46, 139, 108);
+    background: rgb(142, 214, 193);
+    padding: 7px 18px;
+    font-weight: bold;
+    right: 10px;
+    top: 10px;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+  .infos-container {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    border-radius: 0 0 15px 15px;
+    font-size: 18px;
+    padding: 15px 15px 0px 15px;
+    line-height: 1.5;
+    background: white;
+    .icon {
+      font-size: 30px;
+      color: rgba(128, 128, 128, 0.671);
+      padding-right: 10px;
+    }
+  }
+}
