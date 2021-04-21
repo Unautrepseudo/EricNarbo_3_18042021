@@ -1,0 +1,54 @@
+@use '../utils/variables' as *;
+
+.dish {
+  display: flex;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  width: 93%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  overflow-x: hidden;
+  box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
+
+  label {
+    width: 600px;
+    padding-left: 15px;
+  }
+  .checkbox-container {
+    width: 40%;
+    background: $tertiary;
+    margin-right: -11px;
+    position: relative;
+    margin-left: 10px;
+
+    input {
+      position: absolute;
+      left: 55%;
+      top: 50%;
+      transform: translate(-100%, -50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: transparent !important;
+    }
+  }
+  h3 {
+    padding-top: 10px;
+  }
+  .dish-detail {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dish-description {
+    color: grey;
+    font-size: 15px;
+    padding: 5px 0 10px 0;
+    // text-overflow: ellipsis;
+  }
+  .price {
+    font-weight: bold;
+    padding-top: 5px;
+  }
+}

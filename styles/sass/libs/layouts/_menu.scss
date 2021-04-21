@@ -1,0 +1,19 @@
+@use '../utils/variables' as *;
+
+.menu {
+  background: $grey;
+
+  h2 {
+    font-size: 17px;
+    color: grey;
+    font-weight: lighter;
+    padding-left: 23px;
+  }
+}
+
+.subline {
+  width: 40px;
+  height: 2px;
+  background: rgb(124, 226, 167);
+  margin-left: 23px;
+}

@@ -38,7 +38,7 @@ h3 {
   font-family: "Shrikhand", sans-serif;
 }
 
-.card .new-tag, button, .step, .step .number, .step .right-bloc, header {
+.card .new-tag, button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +50,10 @@ header {
 }
 header img {
   transform: scale(0.5);
+}
+header i {
+  font-size: 22px;
+  transform: translateX(30px);
 }
 
 input {
@@ -162,7 +166,6 @@ button {
 .card .img-container img {
   border-radius: 15px 15px 0 0;
   object-fit: cover;
-  object-position: 0% 100%;
 }
 .card .new-tag {
   position: absolute;
@@ -226,6 +229,93 @@ button {
   font-size: 24px;
   padding-left: 10px;
   padding-bottom: 30px;
+}
+
+.landing-container {
+  margin-bottom: 255px;
+}
+.landing-container img {
+  position: absolute;
+}
+.landing-container .overlay {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 45px 45px 0 0;
+  width: 100%;
+  transform: translateY(180px);
+}
+.landing-container .overlay .far {
+  font-size: 30px;
+}
+
+.menu {
+  background: #f2f2f2;
+}
+.menu h2 {
+  font-size: 17px;
+  color: grey;
+  font-weight: lighter;
+  padding-left: 23px;
+}
+
+.subline {
+  width: 40px;
+  height: 2px;
+  background: #7ce2a7;
+  margin-left: 23px;
+}
+
+.dish {
+  display: flex;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  width: 93%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  overflow-x: hidden;
+  box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
+}
+.dish label {
+  width: 600px;
+  padding-left: 15px;
+}
+.dish .checkbox-container {
+  width: 40%;
+  background: #99e2d0;
+  margin-right: -11px;
+  position: relative;
+  margin-left: 10px;
+}
+.dish .checkbox-container input {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent !important;
+}
+.dish h3 {
+  padding-top: 10px;
+}
+.dish .dish-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.dish .dish-description {
+  color: grey;
+  font-size: 15px;
+  padding: 5px 0 10px 0;
+}
+.dish .price {
+  font-weight: bold;
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

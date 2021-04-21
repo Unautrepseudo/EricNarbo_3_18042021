@@ -1,11 +1,16 @@
 @use '../utils/placeholders' as *;
 
 header {
-  @extend %flexcenter;
   height: 55px;
   box-shadow: 0px 0px 5px grey;
-
+  a {
+    @extend %flexcenter;
+  }
   img {
     transform: scale(0.5);
+  }
+  i {
+    font-size: 22px;
+    transform: translateX(30px);
   }
 }
