@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +39,7 @@ h3 {
   font-family: "Shrikhand", sans-serif;
 }
 
-.card .new-tag, button, .step, .step .number, .step .right-bloc, header a {
+input[type=checkbox], .card .new-tag, button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +138,7 @@ footer a {
 }
 
 button {
-  margin: auto;
+  margin: 0 auto;
   border-radius: 30px;
   color: white;
   width: 58%;
@@ -146,6 +147,11 @@ button {
   border: none;
   font-size: 16px;
   box-shadow: 0px 1px 5px grey;
+  transition: 0.3s;
+}
+button:hover {
+  background: linear-gradient(167deg, #ff83dd 0%, #985ede 100%);
+  box-shadow: 0px 2px 8px dimgray;
 }
 
 .card {
@@ -243,10 +249,12 @@ button {
   justify-content: space-between;
   align-items: center;
   background: #f2f2f2;
-  padding: 20px;
+  padding: 30px;
+  padding-bottom: 0px;
   border-radius: 45px 45px 0 0;
   width: 100%;
-  transform: translateY(180px);
+  transform: translateY(190px);
+  font-family: "Shrikhand", sans-serif;
 }
 .landing-container .overlay .far {
   font-size: 30px;
@@ -254,12 +262,19 @@ button {
 
 .menu {
   background: #f2f2f2;
+  padding-top: 10px;
+  padding-bottom: 80px;
 }
 .menu h2 {
   font-size: 17px;
   color: grey;
   font-weight: lighter;
   padding-left: 23px;
+  padding-top: 15px;
+}
+
+.desserts {
+  padding-bottom: 30px;
 }
 
 .subline {
@@ -269,40 +284,58 @@ button {
   margin-left: 23px;
 }
 
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+}
+
+input[type=checkbox]:checked:before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-size: 14px;
+  font-weight: 900;
+  content: "";
+  color: #99e2d0;
+  padding-top: 2px;
+}
+
 .dish {
   display: flex;
   margin: auto;
   background: white;
   border-radius: 12px;
-  width: 93%;
+  width: 92%;
   margin-bottom: 15px;
   margin-top: 15px;
   overflow-x: hidden;
   box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
 }
 .dish label {
-  width: 600px;
+  width: 90%;
   padding-left: 15px;
 }
+.dish label:hover + .checkbox-container {
+  transform: translate(0);
+}
 .dish .checkbox-container {
-  width: 40%;
+  width: 60px;
   background: #99e2d0;
-  margin-right: -11px;
+  transition: 0.3s;
   position: relative;
   margin-left: 10px;
 }
-.dish .checkbox-container input {
-  position: absolute;
-  left: 55%;
-  top: 50%;
-  transform: translate(-100%, -50%);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: transparent !important;
-}
 .dish h3 {
-  padding-top: 10px;
+  padding-top: 12px;
+  font-size: 17px;
 }
 .dish .dish-detail {
   display: flex;
@@ -310,12 +343,16 @@ button {
 }
 .dish .dish-description {
   color: grey;
-  font-size: 15px;
-  padding: 5px 0 10px 0;
+  font-size: 16px;
+  padding: 5px 10px 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dish .price {
   font-weight: bold;
   padding-top: 5px;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

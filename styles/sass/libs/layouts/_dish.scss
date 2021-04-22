@@ -1,40 +1,37 @@
 @use '../utils/variables' as *;
+@use '../components/checkbox';
 
 .dish {
   display: flex;
   margin: auto;
   background: white;
   border-radius: 12px;
-  width: 93%;
+  width: 92%;
   margin-bottom: 15px;
   margin-top: 15px;
   overflow-x: hidden;
   box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
 
   label {
-    width: 600px;
+    width: 90%;
     padding-left: 15px;
-  }
-  .checkbox-container {
-    width: 40%;
-    background: $tertiary;
-    margin-right: -11px;
-    position: relative;
-    margin-left: 10px;
-
-    input {
-      position: absolute;
-      left: 55%;
-      top: 50%;
-      transform: translate(-100%, -50%);
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: transparent !important;
+    &:hover + .checkbox-container {
+      transform: translate(0);
     }
   }
+  .checkbox-container {
+    width: 60px;
+    background: $tertiary;
+    transition: 0.3s;
+    // transform: translate(100%);
+
+    position: relative;
+    margin-left: 10px;
+  }
+
   h3 {
-    padding-top: 10px;
+    padding-top: 12px;
+    font-size: 17px;
   }
   .dish-detail {
     display: flex;
@@ -43,12 +40,22 @@
 
   .dish-description {
     color: grey;
-    font-size: 15px;
-    padding: 5px 0 10px 0;
-    // text-overflow: ellipsis;
+    font-size: 16px;
+    padding: 5px 10px 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .price {
     font-weight: bold;
     padding-top: 5px;
+    font-size: 15px;
   }
+  // .dish-infos {
+  //   width: 125%;
+  //   transition: 0.3s;
+  //   &:hover {
+  //     width: 100%;
+  //   }
+  // }
 }

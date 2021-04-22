@@ -13,11 +13,12 @@
     justify-content: space-between;
     align-items: center;
     background: $grey;
-    padding: 20px;
+    padding: 30px;
+    padding-bottom: 0px;
     border-radius: 45px 45px 0 0;
     width: 100%;
-    transform: translateY(180px);
-    // font-family: 'Shrikhand', sans-serif;
+    transform: translateY(190px);
+    font-family: 'Shrikhand', sans-serif;
     .far {
       font-size: 30px;
     }

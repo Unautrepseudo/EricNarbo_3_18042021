@@ -2,13 +2,20 @@
 
 .menu {
   background: $grey;
+  padding-top: 10px;
+  padding-bottom: 80px;
 
   h2 {
     font-size: 17px;
     color: grey;
     font-weight: lighter;
     padding-left: 23px;
+    padding-top: 15px;
   }
+}
+
+.desserts {
+  padding-bottom: 30px;
 }
 
 .subline {
