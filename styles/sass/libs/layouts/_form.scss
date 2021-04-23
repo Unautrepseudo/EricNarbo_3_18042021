@@ -1,15 +1,18 @@
-input {
-  border: none;
-  width: 100%;
-  height: 50px;
-  background: rgba(107, 107, 107, 0.219);
-  font-size: 18px;
-}
+.location-form {
+  input {
+    border: none;
+    width: 100%;
+    height: 50px;
+    background: rgba(107, 107, 107, 0.219);
+    font-size: 18px;
+    padding: 28px;
+  }
 
-::placeholder {
-  transform: translateX(-20px);
-  text-align: center;
-  color: rgb(98, 98, 98);
-  font-weight: bold;
-  font-family: 'Font Awesome 5 Free';
+  ::placeholder {
+    transform: translateX(-10px);
+    text-align: center;
+    color: rgb(98, 98, 98);
+    font-weight: bold;
+    font-family: 'Font Awesome 5 Free';
+  }
 }

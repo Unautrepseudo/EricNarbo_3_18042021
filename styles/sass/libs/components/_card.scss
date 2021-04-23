@@ -17,20 +17,19 @@
     img {
       border-radius: 15px 15px 0 0;
       object-fit: cover;
-      // object-position: 0% 100%;
     }
   }
   .new-tag {
     @extend %flexcenter;
     position: absolute;
     color: rgb(46, 139, 108);
-    background: rgb(142, 214, 193);
+    background: rgb(142, 214, 192);
     padding: 7px 18px;
     font-weight: bold;
     right: 10px;
     top: 10px;
     border-radius: 2px;
-    font-size: 16px;
+    font-size: 15px;
   }
   .infos-container {
     display: flex;
@@ -41,10 +40,5 @@
     padding: 15px 15px 0px 15px;
     line-height: 1.5;
     background: white;
-    .icon {
-      font-size: 30px;
-      color: rgba(128, 128, 128, 0.671);
-      padding-right: 10px;
-    }
   }
 }

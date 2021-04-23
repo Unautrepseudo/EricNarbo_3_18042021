@@ -1,26 +1,23 @@
 @use '../utils/variables' as *;
-@use '../base/fonts' as *;
+@use '../base/fonts';
 
 .landing-container {
-  //   position: relative;
-  margin-bottom: 255px;
-  img {
-    position: absolute;
-  }
+  height: 260px;
+
   .overlay {
-    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: $grey;
+    font-size: 15px;
+
     padding: 30px;
-    padding-bottom: 0px;
-    border-radius: 45px 45px 0 0;
+    border-radius: 40px 40px 0 0;
     width: 100%;
-    transform: translateY(190px);
+    transform: translateY(-50px);
     font-family: 'Shrikhand', sans-serif;
     .far {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 }
