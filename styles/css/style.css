@@ -364,7 +364,11 @@ input[type=checkbox] {
   background: white;
 }
 
-input[type=checkbox]:checked:after {
+input[type=checkbox]:checked {
+  transform: rotate(360deg);
+  transition: transform 0.2s;
+}
+input[type=checkbox]:checked:before {
   font-family: "Font Awesome 5 Free";
   font-size: 14px;
   font-weight: 900;
@@ -394,9 +398,6 @@ input[type=checkbox]:checked:after {
 .dish label:hover > .dish-infos {
   width: 255px;
   margin-right: 0;
-}
-.dish label:hover ~ input[type=checkbox]:checked:after {
-  transition: 0.2s;
 }
 .dish .checkbox-container {
   width: 70px;

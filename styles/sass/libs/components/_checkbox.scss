@@ -14,7 +14,7 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked {
-  &:after {
+  &:before {
     font-family: 'Font Awesome 5 Free';
     font-size: 14px;
     font-weight: 900;
@@ -22,4 +22,6 @@ input[type='checkbox']:checked {
     color: $tertiary;
     padding-top: 2px;
   }
+  transform: rotate(360deg);
+  transition: transform 0.2s;
 }

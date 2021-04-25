@@ -24,10 +24,8 @@
       width: 255px;
       margin-right: 0;
     }
-    &:hover ~ input[type='checkbox']:checked:after {
-      transition: 0.2s;
-    }
   }
+
   .checkbox-container {
     width: 70px;
     background: $tertiary;
