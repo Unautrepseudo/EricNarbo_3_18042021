@@ -25,16 +25,22 @@
     background: $grey;
     margin-right: 20px;
     padding-right: 40px;
-
     box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
+
+    &:hover {
+      background: darken($grey-hover, 3%);
+      box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.589);
+    }
+    &:hover > .icone {
+      color: $primary;
+    }
   }
 
   .icone {
     padding: 30px;
-
     padding-left: 35px;
     color: grey;
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .text {

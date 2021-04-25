@@ -5,11 +5,8 @@ input[type='checkbox'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  position: absolute;
   @extend %flexcenter;
-  left: 55%;
-  top: 50%;
-  transform: translate(-100%, -50%);
+  flex-direction: column;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -17,8 +14,7 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked {
-  &:before {
-    display: inline-block;
+  &:after {
     font-family: 'Font Awesome 5 Free';
     font-size: 14px;
     font-weight: 900;

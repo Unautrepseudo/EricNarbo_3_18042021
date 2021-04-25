@@ -9,15 +9,20 @@
     justify-content: space-between;
     align-items: center;
     background: $grey;
-    font-size: 15px;
 
-    padding: 30px;
+    padding: 23px;
     border-radius: 40px 40px 0 0;
     width: 100%;
     transform: translateY(-50px);
-    font-family: 'Shrikhand', sans-serif;
     .far {
       font-size: 25px;
+    }
+    h1 {
+      font-family: 'Shrikhand', cursive;
+      font-size: 30px;
+      font-weight: 900;
+      font-style: italic;
+      word-spacing: -6px;
     }
   }
 }

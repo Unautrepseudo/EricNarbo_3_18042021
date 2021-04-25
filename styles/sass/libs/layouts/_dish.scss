@@ -1,4 +1,6 @@
 @use '../utils/variables' as *;
+@use '../utils/dish-animation';
+
 @use '../components/checkbox';
 
 .dish {
@@ -6,32 +8,44 @@
   margin: auto;
   background: white;
   border-radius: 15px;
-  width: 93%;
+  width: 350px;
   margin-bottom: 15px;
   margin-top: 15px;
   overflow-x: hidden;
   box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
+  animation-name: show;
+  animation-duration: 2s;
 
   label {
-    width: 460px;
+    width: 350px;
     padding-left: 15px;
-    &:hover + .checkbox-container {
-      transform: translate(0);
+    display: flex;
+    &:hover > .dish-infos {
+      width: 255px;
+      margin-right: 0;
+    }
+    &:hover ~ input[type='checkbox']:checked:after {
+      transition: 0.2s;
     }
   }
   .checkbox-container {
-    width: 80px;
+    width: 70px;
     background: $tertiary;
     transition: 0.3s;
-    // transform: translate(100%);
-
-    position: relative;
-    margin-left: 10px;
+    // position: absolute;
+    @extend %flexcenter;
+    flex-direction: column;
+    right: 12px;
+    height: 70px;
+    border-radius: 0 15px 15px 0;
   }
 
   h3 {
     padding-top: 13px;
-    font-size: 18px;
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .dish-detail {
     display: flex;
@@ -40,7 +54,7 @@
 
   .dish-description {
     color: grey;
-    font-size: 14px;
+    font-size: 15px;
     padding: 5px 10px 15px 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,7 +66,8 @@
     font-size: 15px;
   }
   .dish-infos {
-    width: 280px;
-    transition: 0.3s;
+    width: 315px;
+    transition: 0.2s;
+    margin-right: 20px;
   }
 }

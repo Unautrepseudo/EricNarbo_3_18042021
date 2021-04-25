@@ -9,6 +9,10 @@
 @use '../utils/variables' as *;
 @use '../utils/placeholders' as *;
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .hero {
   background: $grey;
   padding-bottom: 60px;
@@ -34,7 +38,7 @@
   padding-bottom: 50px;
 
   h2 {
-    font-size: 24px;
+    font-size: 22px;
     padding-left: 10px;
     padding-bottom: 25px;
   }

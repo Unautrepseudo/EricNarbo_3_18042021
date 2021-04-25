@@ -21,25 +21,7 @@ img {
   width: 100%;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: local("/assets/fonts/Roboto-Regular.ttf") format("ttf");
-}
-@font-face {
-  font-family: "Shrikhand";
-  src: local("/assets/fonts/Shrikhand-Regular.ttf") format("ttf");
-}
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Shrikhand", sans-serif;
-}
-
-input[type=checkbox], .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
+input[type=checkbox], .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,11 +78,18 @@ header i {
   padding-right: 40px;
   box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.589);
 }
+.step .right-bloc:hover {
+  background: #f0e9e9;
+  box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.589);
+}
+.step .right-bloc:hover > .icone {
+  color: #9356dc;
+}
 .step .icone {
   padding: 30px;
   padding-left: 35px;
   color: grey;
-  font-size: 22px;
+  font-size: 20px;
 }
 .step .text {
   font-size: 16px;
@@ -162,23 +151,41 @@ footer a {
   position: relative;
   overflow: hidden;
   font-size: 26px;
-  color: rgba(161, 161, 161, 0.671);
-  top: 9px;
+  color: #525252;
+  top: 2px;
   padding-right: 30px;
   height: 26px;
-}
-.heart-button .fas {
-  color: #ff79da;
-  position: absolute;
-  transform: translateY(0%);
+  cursor: pointer;
 }
 .heart-button .far {
   position: absolute;
+  background: transparent;
+  z-index: 2;
+  opacity: 1;
+  transition: 0.2s;
+}
+.heart-button .far:hover {
+  opacity: 0.1;
+}
+.heart-button .far:hover ~ .fas {
+  transition: 0.2s;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+.heart-button .fas {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
+.heart-button .fas:hover ~ .heart-button {
+  color: rgba(82, 82, 82, 0);
 }
 
 .card {
   border-radius: 15px;
-  width: 92%;
+  width: 94%;
   height: 280px;
   display: flex;
   margin: 0 auto;
@@ -217,6 +224,10 @@ footer a {
   background: white;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .hero {
   background: #f2f2f2;
   padding-bottom: 60px;
@@ -241,7 +252,7 @@ footer a {
   padding-bottom: 50px;
 }
 .fonctionnement h2 {
-  font-size: 24px;
+  font-size: 22px;
   padding-left: 10px;
   padding-bottom: 25px;
 }
@@ -264,28 +275,34 @@ footer a {
   justify-content: space-between;
   align-items: center;
   background: #f2f2f2;
-  font-size: 15px;
-  padding: 30px;
+  padding: 23px;
   border-radius: 40px 40px 0 0;
   width: 100%;
   transform: translateY(-50px);
-  font-family: "Shrikhand", sans-serif;
 }
 .landing-container .overlay .far {
   font-size: 25px;
 }
+.landing-container .overlay h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+  word-spacing: -6px;
+}
 
 .menu {
   background: #f2f2f2;
-  padding-top: 35px;
+  padding-top: 23px;
   padding-bottom: 80px;
 }
 .menu h2 {
-  font-size: 16px;
+  font-size: 15px;
   color: grey;
   font-weight: lighter;
   padding-left: 23px;
   padding-top: 15px;
+  text-transform: uppercase;
 }
 
 .desserts {
@@ -300,22 +317,54 @@ footer a {
   margin-left: 23px;
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dish-1 {
+  transition-delay: 0.5s;
+  transition: opacity 3s transform 4s;
+}
+
+.dish-2 {
+  animation-delay: 0.2s;
+  transition-delay: 1s;
+  transition: opacity 12s transform 4s;
+  transition-property: opacity;
+}
+
+.dish-3 {
+  animation-delay: 0.3s;
+  transition-delay: 2s;
+  transition: opacity 20s transform 4s;
+  transition-property: opacity;
+}
+
+.dish-4 {
+  animation-delay: 0.4s;
+  transition-delay: 2s;
+  transition: opacity 28s transform 4s;
+  transition-property: opacity;
+}
+
 input[type=checkbox] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  position: absolute;
-  left: 55%;
-  top: 50%;
-  transform: translate(-100%, -50%);
+  flex-direction: column;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   background: white;
 }
 
-input[type=checkbox]:checked:before {
-  display: inline-block;
+input[type=checkbox]:checked:after {
   font-family: "Font Awesome 5 Free";
   font-size: 14px;
   font-weight: 900;
@@ -329,29 +378,41 @@ input[type=checkbox]:checked:before {
   margin: auto;
   background: white;
   border-radius: 15px;
-  width: 93%;
+  width: 350px;
   margin-bottom: 15px;
   margin-top: 15px;
   overflow-x: hidden;
   box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
+  animation-name: show;
+  animation-duration: 2s;
 }
 .dish label {
-  width: 460px;
+  width: 350px;
   padding-left: 15px;
+  display: flex;
 }
-.dish label:hover + .checkbox-container {
-  transform: translate(0);
+.dish label:hover > .dish-infos {
+  width: 255px;
+  margin-right: 0;
+}
+.dish label:hover ~ input[type=checkbox]:checked:after {
+  transition: 0.2s;
 }
 .dish .checkbox-container {
-  width: 80px;
+  width: 70px;
   background: #99e2d0;
   transition: 0.3s;
-  position: relative;
-  margin-left: 10px;
+  flex-direction: column;
+  right: 12px;
+  height: 70px;
+  border-radius: 0 15px 15px 0;
 }
 .dish h3 {
   padding-top: 13px;
-  font-size: 18px;
+  font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dish .dish-detail {
   display: flex;
@@ -359,7 +420,7 @@ input[type=checkbox]:checked:before {
 }
 .dish .dish-description {
   color: grey;
-  font-size: 14px;
+  font-size: 15px;
   padding: 5px 10px 15px 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -371,8 +432,9 @@ input[type=checkbox]:checked:before {
   font-size: 15px;
 }
 .dish .dish-infos {
-  width: 280px;
-  transition: 0.3s;
+  width: 315px;
+  transition: 0.2s;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
