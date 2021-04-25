@@ -21,6 +21,11 @@ img {
   width: 100%;
 }
 
+.container {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
 input[type=checkbox], .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
@@ -290,6 +295,9 @@ body {
   font-style: italic;
   word-spacing: -6px;
 }
+.landing-container .lc-img-container img {
+  max-width: 800px;
+}
 
 .menu {
   background: #f2f2f2;
@@ -366,7 +374,7 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked {
   transform: rotate(360deg);
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 input[type=checkbox]:checked:before {
   font-family: "Font Awesome 5 Free";
