@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,15 +23,24 @@ img {
 }
 
 .container {
-  max-width: 380px;
+  max-width: 375px;
   margin: 0 auto;
+  background: #f2f2f2;
 }
 
-body {
-  overflow-x: hidden;
+@media (min-width: 376px) {
+  body {
+    background-image: url("/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.landing-container h1 {
+  font-family: "Shrikhand", sans-serif;
 }
 
-input[type=checkbox], .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
+.dish .toto, .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +49,7 @@ input[type=checkbox], .dish .checkbox-container, .card .new-tag, .pink-button, .
 header {
   height: 55px;
   box-shadow: 0px 0px 5px grey;
+  background: white;
 }
 header img {
   transform: scale(0.46);
@@ -153,46 +164,6 @@ footer a {
   box-shadow: 0px 2px 8px dimgray;
 }
 
-.heart-button {
-  background: transparent;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  font-size: 26px;
-  color: #525252;
-  top: 2px;
-  padding-right: 30px;
-  height: 26px;
-  cursor: pointer;
-}
-.heart-button .far {
-  position: absolute;
-  background: transparent;
-  z-index: 2;
-  opacity: 1;
-  transition: 0.2s;
-}
-.heart-button .far:hover {
-  opacity: 0.1;
-}
-.heart-button .far:hover ~ .fas {
-  transition: 0.2s;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-}
-.heart-button .fas {
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-}
-.heart-button .fas:hover ~ .heart-button {
-  color: rgba(82, 82, 82, 0);
-}
-
 .card {
   border-radius: 15px;
   width: 94%;
@@ -260,6 +231,7 @@ body {
 .fonctionnement {
   padding-top: 50px;
   padding-bottom: 50px;
+  background: white;
 }
 .fonctionnement h2 {
   font-size: 22px;
@@ -294,11 +266,8 @@ body {
   font-size: 25px;
 }
 .landing-container .overlay h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-  font-weight: 900;
-  font-style: italic;
-  word-spacing: -6px;
+  font-size: 27px;
+  font-weight: 600;
 }
 .landing-container .lc-img-container img {
   max-width: 800px;
@@ -332,7 +301,7 @@ body {
 
 @keyframes show {
   from {
-    opacity: 0;
+    opacity: 0.2;
     transform: translateY(20px);
   }
   to {
@@ -341,53 +310,76 @@ body {
   }
 }
 .dish-1 {
-  transition-delay: 0.5s;
-  transition: opacity 3s transform 4s;
+  animation-delay: 0.2s;
 }
 
 .dish-2 {
-  animation-delay: 0.2s;
-  transition-delay: 1s;
-  transition: opacity 12s transform 4s;
-  transition-property: opacity;
+  animation-delay: 0.4s;
 }
 
 .dish-3 {
-  animation-delay: 0.3s;
-  transition-delay: 2s;
-  transition: opacity 20s transform 4s;
-  transition-property: opacity;
+  animation-delay: 0.6s;
 }
 
 .dish-4 {
-  animation-delay: 0.4s;
-  transition-delay: 2s;
-  transition: opacity 28s transform 4s;
-  transition-property: opacity;
+  animation-delay: 0.8s;
 }
 
-input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  flex-direction: column;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: white;
-}
-
-input[type=checkbox]:checked {
-  transform: rotate(360deg);
-  transition: transform 0.3s;
-}
-input[type=checkbox]:checked:before {
+.checkbox-container input:before {
   font-family: "Font Awesome 5 Free";
   font-size: 14px;
   font-weight: 900;
   content: "";
   color: #99e2d0;
   padding-top: 2px;
+}
+.checkbox-container input:checked {
+  transform: rotate(360deg);
+  transition: 0.3s;
+}
+
+#heart {
+  display: none;
+}
+#heart:checked ~ .fas {
+  transition: 0.2s;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+#heart:checked ~ .far {
+  opacity: 0.1;
+  display: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart-checkbox {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  font-size: 26px;
+  color: #525252;
+  padding-right: 30px;
+  height: 26px;
+  cursor: pointer;
+}
+.heart-checkbox .far {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.heart-checkbox .fas {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
 }
 
 .dish {
@@ -402,6 +394,8 @@ input[type=checkbox]:checked:before {
   box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.389);
   animation-name: show;
   animation-duration: 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .dish label {
   width: 350px;
@@ -413,6 +407,24 @@ input[type=checkbox]:checked:before {
   width: 255px;
   margin-right: 0;
 }
+.dish label:hover ~ .toto {
+  transform: rotate(360deg);
+  right: 20px;
+  transition: transform 0.2s;
+}
+.dish .toto {
+  position: absolute;
+  font-size: 14px;
+  background: white;
+  color: #99e2d0;
+  padding-top: 2px;
+  right: -20px;
+  top: 25px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+}
 .dish .checkbox-container {
   width: 70px;
   background: #99e2d0;
@@ -421,6 +433,9 @@ input[type=checkbox]:checked:before {
   right: 12px;
   height: 70px;
   border-radius: 0 15px 15px 0;
+}
+.dish .checkbox-container input {
+  display: none;
 }
 .dish h3 {
   padding-top: 13px;
@@ -453,19 +468,21 @@ input[type=checkbox]:checked:before {
 }
 
 .loading {
-  width: 100vw;
+  width: 99vw;
   height: 100%;
   display: flex;
   background: #fafafa;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   justify-content: center;
   align-items: center;
   animation-name: vanish;
   animation-duration: 5s;
+  animation-fill-mode: forwards;
 }
 .loading span {
-  font-size: 60px;
+  display: inline-block;
+  font-size: 40px;
   animation-name: breath;
   animation-duration: 0.8s;
   animation-direction: alternate;
@@ -475,16 +492,17 @@ input[type=checkbox]:checked:before {
 
 @keyframes vanish {
   0% {
-    z-index: 2;
+    z-index: 6;
   }
   80% {
-    opacity: 1;
+    opacity: 5;
   }
   99% {
-    z-index: 2;
+    z-index: 4;
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 @keyframes breath {
@@ -494,6 +512,28 @@ input[type=checkbox]:checked:before {
   to {
     transform: scale(1.2);
     color: #ff79da;
+  }
+}
+.loading::after {
+  content: "";
+  margin-left: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-top: 2px solid #c20cf0;
+  border-bottom: 1px solid #d31515;
+  animation: tournicoton;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  box-shadow: 3px 3px 101px rgba(176, 12, 226, 0.596);
+}
+
+@keyframes tournicoton {
+  to {
+    transform: rotate(5400deg);
+    box-shadow: 3px 3px 103px #a624ce;
   }
 }
 

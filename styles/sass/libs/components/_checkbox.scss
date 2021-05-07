@@ -1,19 +1,7 @@
 @use '../utils/placeholders' as *;
 @use '../utils/variables' as *;
 
-input[type='checkbox'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  @extend %flexcenter;
-  flex-direction: column;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: white;
-}
-
-input[type='checkbox']:checked {
+.checkbox-container input {
   &:before {
     font-family: 'Font Awesome 5 Free';
     font-size: 14px;
@@ -22,6 +10,62 @@ input[type='checkbox']:checked {
     color: $tertiary;
     padding-top: 2px;
   }
-  transform: rotate(360deg);
-  transition: transform 0.3s;
+  &:checked {
+    transform: rotate(360deg);
+    transition: 0.3s;
+  }
+
+  // &:checked ~ .checkbox-container {
+  //   transform: translateX(50px);
+  //   background: red;
+  //   transition: transform 0.3s;
+  // }
+}
+
+#heart {
+  display: none;
+
+  &:checked ~ .fas {
+    transition: 0.2s;
+    background: -webkit-linear-gradient($primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+  }
+  &:checked ~ .far {
+    opacity: 0.1;
+
+    display: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.heart-checkbox {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  font-size: 26px;
+  color: rgb(82, 82, 82);
+  padding-right: 30px;
+  height: 26px;
+  cursor: pointer;
+
+  .far {
+    position: absolute;
+    background: transparent;
+    z-index: 2;
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+  }
+
+  .fas {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+  }
 }
