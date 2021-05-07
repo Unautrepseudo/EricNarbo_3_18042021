@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
@@ -30,7 +29,7 @@ img {
 
 @media (min-width: 376px) {
   body {
-    background-image: url("/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-image: url("./assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,7 +39,7 @@ img {
   font-family: "Shrikhand", sans-serif;
 }
 
-.dish .toto, .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
+.dish .dish-check, .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,17 +324,14 @@ body {
   animation-delay: 0.8s;
 }
 
-.checkbox-container input:before {
-  font-family: "Font Awesome 5 Free";
-  font-size: 14px;
-  font-weight: 900;
-  content: "";
-  color: #99e2d0;
-  padding-top: 2px;
+.dish input:checked ~ .checkbox-container {
+  transform: translateX(0px);
 }
-.checkbox-container input:checked {
+.dish input:checked ~ .dish-check {
   transform: rotate(360deg);
-  transition: 0.3s;
+  right: 20px;
+  animation-fill-mode: forwards;
+  transition: transform 0.2s;
 }
 
 #heart {
@@ -397,22 +393,16 @@ body {
   opacity: 0;
   animation-fill-mode: forwards;
 }
+.dish input {
+  display: none;
+}
 .dish label {
   width: 350px;
   padding-left: 15px;
   display: flex;
   cursor: pointer;
 }
-.dish label:hover > .dish-infos {
-  width: 255px;
-  margin-right: 0;
-}
-.dish label:hover ~ .toto {
-  transform: rotate(360deg);
-  right: 20px;
-  transition: transform 0.2s;
-}
-.dish .toto {
+.dish .dish-check {
   position: absolute;
   font-size: 14px;
   background: white;
@@ -424,18 +414,21 @@ body {
   height: 18px;
   border-radius: 50%;
   background: white;
+  z-index: 3;
 }
 .dish .checkbox-container {
   width: 70px;
   background: #99e2d0;
   transition: 0.3s;
   flex-direction: column;
-  right: 12px;
+  transform: translateX(70px);
+  right: 10px;
   height: 70px;
   border-radius: 0 15px 15px 0;
-}
-.dish .checkbox-container input {
-  display: none;
+  z-index: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
 }
 .dish h3 {
   padding-top: 13px;

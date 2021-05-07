@@ -1,25 +1,45 @@
 @use '../utils/placeholders' as *;
 @use '../utils/variables' as *;
 
-.checkbox-container input {
-  &:before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 14px;
-    font-weight: 900;
-    content: '\f00c';
-    color: $tertiary;
-    padding-top: 2px;
-  }
-  &:checked {
-    transform: rotate(360deg);
-    transition: 0.3s;
-  }
+.dish input:checked ~ .dish-check {
+  // transform: rotateX(720deg) !important;
+  // transition: 0.3s;
+  //   transition: 0.3s;
+  // &:before {
+  //   font-family: 'Font Awesome 5 Free';
+  //   font-size: 14px;
+  //   font-weight: 900;
+  //   content: '\f00c';
+  //   color: $tertiary;
+  //   padding-top: 2px;
+  // }
+  // &:checked ~ .dish-check {
+  //   transform: rotate(360deg);
+  //   transition: 0.3s;
+  // }
 
   // &:checked ~ .checkbox-container {
   //   transform: translateX(50px);
   //   background: red;
   //   transition: transform 0.3s;
   // }
+}
+.dish input {
+  // &:checked + .dish-infos {
+  //   width: 255px;
+  //   margin-right: 0;
+  //   animation-fill-mode: forwards;
+  // }
+  &:checked ~ .checkbox-container {
+    transform: translateX(0px);
+  }
+  &:checked ~ .dish-check {
+    transform: rotate(360deg);
+    right: 20px;
+    animation-fill-mode: forwards;
+
+    transition: transform 0.2s;
+  }
 }
 
 #heart {

@@ -19,25 +19,32 @@
   opacity: 0;
   animation-fill-mode: forwards;
 
+  input {
+    display: none;
+    // &:checked ~ .label {
+    //   width: 5px;
+    //   margin-right: 0;
+    // }
+  }
   label {
     width: 350px;
     padding-left: 15px;
     display: flex;
     cursor: pointer;
 
-    &:hover > .dish-infos {
-      width: 255px;
-      margin-right: 0;
-    }
-    &:hover ~ .toto {
-      transform: rotate(360deg);
-      right: 20px;
+    // &:hover > .dish-infos {
+    //   width: 255px;
+    //   margin-right: 0;
+    // }
+    // &:hover ~ .dish-check {
+    //   transform: rotate(360deg);
+    //   right: 20px;
 
-      transition: transform 0.2s;
-    }
+    //   transition: transform 0.2s;
+    // }
   }
 
-  .toto {
+  .dish-check {
     position: absolute;
     font-size: 14px;
     background: white;
@@ -50,6 +57,7 @@
     border-radius: 50%;
     background: white;
     @extend %flexcenter;
+    z-index: 3;
   }
 
   .checkbox-container {
@@ -58,13 +66,14 @@
     transition: 0.3s;
     @extend %flexcenter;
     flex-direction: column;
-    right: 12px;
+    transform: translateX(70px);
+    right: 10px;
     height: 70px;
     border-radius: 0 15px 15px 0;
-
-    input {
-      display: none;
-    }
+    z-index: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
   }
 
   h3 {
