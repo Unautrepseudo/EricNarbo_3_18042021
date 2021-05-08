@@ -37,6 +37,7 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
   background: white;
+  // display: flex;
 
   h2 {
     font-size: 22px;
@@ -48,6 +49,8 @@ body {
 .restaurants {
   background: $grey;
   padding-top: 50px;
+  // display: flex;
+
   h2 {
     font-size: 24px;
     padding-left: 10px;

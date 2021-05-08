@@ -21,26 +21,21 @@
           <img src="assets/img/logo/ohmyfood@2x.svg" alt="logo" />
         </a>
       </header>
-
-      <div class="landing-container">
-        <div class="lc-img-container">
-          <img
-            src="assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt=" image de plat"
-          />
-        </div>
-
-        <div class="overlay">
-          <h1>La palette du goût</h1>
-          <label for="heart" type="checkbox" class="icon heart-checkbox">
-            <input type="checkbox" name="heart" id="heart" />
-            <i class="far fa-heart"></i>
-            <i class="fas fa-heart"></i>
-          </label>
-        </div>
+      <div class="lc-img-container">
+        <img
+          src="assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt=" image de plat"
+        />
       </div>
 
       <form class="menu">
+        <div class="menu-title">
+          <h1>La palette du goût</h1>
+          <button type="button" class="icon heart-button">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
         <section class="entrees">
           <h2>Entrées</h2>
           <div class="subline"></div>
@@ -57,7 +52,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-a1" id="dish-a-a1" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
           <div class="dish dish-2">
             <label for="dish-a-a2">
@@ -72,7 +67,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-a2" id="dish-a-a2" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
           <div class="dish dish-3">
             <label for="dish-a-a3">
@@ -89,7 +84,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-a3" id="dish-a-a3" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
         </section>
         <section class="plats">
@@ -110,7 +105,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-b1" id="dish-a-b1" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
           <div class="dish dish-2">
             <label for="dish-a-b2">
@@ -127,7 +122,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-b2" id="dish-a-b2" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
           <div class="dish dish-3">
             <label for="dish-a-b3">
@@ -142,7 +137,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-b3" id="dish-a-b3" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
         </section>
         <section class="desserts">
@@ -161,7 +156,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-c1" id="dish-a-c1" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
           <div class="dish dish-2">
             <label for="dish-a-c2">
@@ -178,7 +173,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-c2" id="dish-a-c2" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
           <div class="dish dish-3">
             <label for="dish-a-c3">
@@ -195,7 +190,7 @@
             <span class="checkbox-container">
               <input type="checkbox" name="dish-a-c3" id="dish-a-c3" />
             </span>
-            <span class="toto"><i class="fas fa-check"></i></span>
+            <div class="checkfa"><i class="fas fa-check"></i></div>
           </div>
         </section>
         <button class="pink-button" type="submit">Commander</button>
@@ -242,28 +237,26 @@
             fill="#101010"
           />
         </svg>
-        <li>
-          <a href="">
-            <div class="row">
-              <span><i class="fas fa-utensils"></i></span>
+        <ul>
+          <li>
+            <a href="">
+              <i class="fas fa-utensils"></i>
               <p>Proposer un restaurant</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="row">
-              <span><i class="fas fa-hands-helping"></i></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fas fa-hands-helping"></i>
               <p>Devenir partenaire</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href=""> Mentions légales </a>
-        </li>
-        <li>
-          <a href="mailto:ohmyfood@gmail.com"> Contact </a>
-        </li>
+            </a>
+          </li>
+          <li>
+            <a href=""> Mentions légales </a>
+          </li>
+          <li>
+            <a href="mailto:ohmyfood@gmail.com"> Contact </a>
+          </li>
+        </ul>
       </footer>
     </div>
   </body>

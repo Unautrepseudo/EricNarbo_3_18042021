@@ -1,30 +1,12 @@
 @use '../utils/variables' as *;
 @use '../base/fonts';
 
-.landing-container {
+.lc-img-container {
   height: 260px;
 
-  .overlay {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $grey;
-
-    padding: 23px;
-    border-radius: 40px 40px 0 0;
-    width: 100%;
-    transform: translateY(-50px);
-    .far {
-      font-size: 25px;
-    }
-    h1 {
-      font-size: 27px;
-      font-weight: 600;
-    }
-  }
-  .lc-img-container {
-    img {
-      max-width: 800px;
-    }
+  // height: 300px;
+  img {
+    // max-width: 800px;
+    object-fit: cover;
   }
 }

@@ -29,7 +29,7 @@
       width: 255px;
       margin-right: 0;
     }
-    &:hover ~ .toto {
+    &:hover ~ .checkfa {
       transform: rotate(360deg);
       right: 20px;
 
@@ -37,7 +37,7 @@
     }
   }
 
-  .toto {
+  .checkfa {
     position: absolute;
     font-size: 14px;
     background: white;
@@ -96,5 +96,6 @@
     width: 315px;
     transition: 0.2s;
     margin-right: 20px;
+    flex-direction: column;
   }
 }

@@ -23,7 +23,6 @@ img {
 }
 
 .container {
-  max-width: 375px;
   margin: 0 auto;
   background: #f2f2f2;
 }
@@ -36,11 +35,11 @@ img {
     background-size: cover;
   }
 }
-.landing-container h1 {
+.menu-title h1 {
   font-family: "Shrikhand", sans-serif;
 }
 
-.dish .toto, .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
+.dish .checkfa, .dish .checkbox-container, .card .new-tag, .pink-button, .step, .step .number, .step .right-bloc, header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,13 +49,15 @@ header {
   height: 55px;
   box-shadow: 0px 0px 5px grey;
   background: white;
+  padding-top: 14px;
 }
 header img {
-  transform: scale(0.46);
+  width: 180px;
 }
 header i {
   font-size: 22px;
-  transform: translateX(30px);
+  position: absolute;
+  left: 20px;
 }
 
 .location-form input {
@@ -127,23 +128,19 @@ footer svg {
 footer svg path {
   fill: white !important;
 }
-footer .row {
-  display: flex;
-  color: white;
-  align-items: center;
-  font-size: 18px;
-}
-footer .row span {
+footer .fas {
   padding-right: 10px;
   font-size: 16px;
 }
-footer .row .fa-hands-helping {
+footer .fa-hands-helping {
   transform: rotate(-15deg);
   font-size: 12px;
 }
 footer a {
   color: white;
   font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 
 .pink-button {
@@ -162,6 +159,46 @@ footer a {
 .pink-button:hover {
   background: linear-gradient(167deg, #ff83dd 0%, #985ede 100%);
   box-shadow: 0px 2px 8px dimgray;
+}
+
+.heart-button {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  font-size: 26px;
+  color: #525252;
+  top: 2px;
+  padding-right: 30px;
+  height: 26px;
+  cursor: pointer;
+}
+.heart-button .far {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  opacity: 1;
+  transition: 0.4s;
+}
+.heart-button .far:hover {
+  opacity: 0.1;
+}
+.heart-button .far:hover ~ .fas {
+  transition: 0.4s;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+.heart-button .fas {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
+.heart-button .fas:hover ~ .heart-button {
+  color: rgba(82, 82, 82, 0);
 }
 
 .card {
@@ -249,41 +286,40 @@ body {
   padding-bottom: 30px;
 }
 
-.landing-container {
+.lc-img-container {
   height: 260px;
 }
-.landing-container .overlay {
+.lc-img-container img {
+  object-fit: cover;
+}
+
+.menu-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f2f2f2;
   padding: 23px;
-  border-radius: 40px 40px 0 0;
+  padding-bottom: 10px;
   width: 100%;
-  transform: translateY(-50px);
 }
-.landing-container .overlay .far {
+.menu-title .far {
   font-size: 25px;
 }
-.landing-container .overlay h1 {
+.menu-title h1 {
   font-size: 27px;
   font-weight: 600;
 }
-.landing-container .lc-img-container img {
-  max-width: 800px;
-}
 
 .menu {
+  transform: translateY(-65px);
+  border-radius: 40px 40px 0 0;
   background: #f2f2f2;
-  padding-top: 23px;
-  padding-bottom: 80px;
 }
 .menu h2 {
   font-size: 15px;
   color: grey;
   font-weight: lighter;
   padding-left: 23px;
-  padding-top: 15px;
+  padding-top: 20px;
   text-transform: uppercase;
 }
 
@@ -338,50 +374,6 @@ body {
   transition: 0.3s;
 }
 
-#heart {
-  display: none;
-}
-#heart:checked ~ .fas {
-  transition: 0.2s;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-}
-#heart:checked ~ .far {
-  opacity: 0.1;
-  display: none;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.heart-checkbox {
-  background: transparent;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  font-size: 26px;
-  color: #525252;
-  padding-right: 30px;
-  height: 26px;
-  cursor: pointer;
-}
-.heart-checkbox .far {
-  position: absolute;
-  background: transparent;
-  z-index: 2;
-  opacity: 1;
-  transition: 0.4s ease-in-out;
-}
-.heart-checkbox .fas {
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  transition: 0.4s ease-in-out;
-}
-
 .dish {
   display: flex;
   margin: auto;
@@ -407,12 +399,12 @@ body {
   width: 255px;
   margin-right: 0;
 }
-.dish label:hover ~ .toto {
+.dish label:hover ~ .checkfa {
   transform: rotate(360deg);
   right: 20px;
   transition: transform 0.2s;
 }
-.dish .toto {
+.dish .checkfa {
   position: absolute;
   font-size: 14px;
   background: white;
@@ -465,6 +457,7 @@ body {
   width: 315px;
   transition: 0.2s;
   margin-right: 20px;
+  flex-direction: column;
 }
 
 .loading {
@@ -477,7 +470,7 @@ body {
   justify-content: center;
   align-items: center;
   animation-name: vanish;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 .loading span {
