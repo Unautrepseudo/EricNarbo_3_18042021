@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
@@ -23,16 +22,73 @@ img {
 }
 
 .container {
-  margin: 0 auto;
   background: #f2f2f2;
 }
 
-@media (min-width: 376px) {
-  body {
-    background-image: url("/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (min-width: 768px) {
+  footer svg {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 880px) {
+  .hero .pink-button {
+    width: 300px;
+  }
+
+  .fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .fonctionnement h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .fonctionnement .step {
+    width: 25%;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restaurants h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .restaurants .card {
+    width: 20%;
+  }
+
+  .lc-img-container {
+    height: 300px !important;
+    object-fit: fill;
+  }
+  .lc-img-container img {
+    height: 80%;
+  }
+
+  .menu {
+    border-radius: 0px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .menu .pink-button {
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 40%;
+    margin-bottom: 30px;
+  }
+
+  .menu-title {
+    width: 100%;
   }
 }
 .menu-title h1 {
@@ -361,17 +417,19 @@ body {
   animation-delay: 0.8s;
 }
 
-.checkbox-container input:before {
-  font-family: "Font Awesome 5 Free";
-  font-size: 14px;
-  font-weight: 900;
-  content: "";
-  color: #99e2d0;
-  padding-top: 2px;
+.dish input:checked ~ .dish-infos {
+  width: 255px !important;
+  margin-right: 5px;
 }
-.checkbox-container input:checked {
+.dish input:checked ~ .checkfa {
   transform: rotate(360deg);
-  transition: 0.3s;
+  right: 27px;
+  opacity: 1;
+  transition: transform 0.2s;
+}
+.dish input:checked ~ .checkbox-container {
+  transform: translateX(13px);
+  transition: transform 0.3s;
 }
 
 .dish {
@@ -395,15 +453,6 @@ body {
   display: flex;
   cursor: pointer;
 }
-.dish label:hover > .dish-infos {
-  width: 255px;
-  margin-right: 0;
-}
-.dish label:hover ~ .checkfa {
-  transform: rotate(360deg);
-  right: 20px;
-  transition: transform 0.2s;
-}
 .dish .checkfa {
   position: absolute;
   font-size: 14px;
@@ -411,7 +460,8 @@ body {
   color: #99e2d0;
   padding-top: 2px;
   right: -20px;
-  top: 25px;
+  opacity: 0;
+  top: 27px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -425,8 +475,10 @@ body {
   right: 12px;
   height: 70px;
   border-radius: 0 15px 15px 0;
+  position: absolute;
+  transform: translateX(82px);
 }
-.dish .checkbox-container input {
+.dish input {
   display: none;
 }
 .dish h3 {
@@ -454,7 +506,7 @@ body {
   font-size: 15px;
 }
 .dish .dish-infos {
-  width: 315px;
+  width: 100%;
   transition: 0.2s;
   margin-right: 20px;
   flex-direction: column;

@@ -24,17 +24,6 @@
     padding-left: 15px;
     display: flex;
     cursor: pointer;
-
-    &:hover > .dish-infos {
-      width: 255px;
-      margin-right: 0;
-    }
-    &:hover ~ .checkfa {
-      transform: rotate(360deg);
-      right: 20px;
-
-      transition: transform 0.2s;
-    }
   }
 
   .checkfa {
@@ -44,7 +33,8 @@
     color: $tertiary;
     padding-top: 2px;
     right: -20px;
-    top: 25px;
+    opacity: 0;
+    top: 27px;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -61,12 +51,12 @@
     right: 12px;
     height: 70px;
     border-radius: 0 15px 15px 0;
-
-    input {
-      display: none;
-    }
+    position: absolute;
+    transform: translateX(82px);
   }
-
+  input {
+    display: none;
+  }
   h3 {
     padding-top: 13px;
     font-size: 17px;
@@ -93,7 +83,7 @@
     font-size: 15px;
   }
   .dish-infos {
-    width: 315px;
+    width: 100%;
     transition: 0.2s;
     margin-right: 20px;
     flex-direction: column;

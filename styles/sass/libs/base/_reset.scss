@@ -20,16 +20,77 @@ img {
   width: 100%;
 }
 .container {
-  // max-width: 375px;
-  margin: 0 auto;
   background: $grey;
 }
 
-@media (min-width: 376px) {
-  body {
-    background-image: url('/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (min-width: 768px) {
+  footer {
+    svg {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (min-width: 880px) {
+  .hero {
+    .pink-button {
+      width: 300px;
+    }
+  }
+  .fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h2 {
+      text-align: center;
+      width: 100%;
+    }
+    .step {
+      width: 25%;
+    }
+  }
+
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      width: 100%;
+    }
+    .card {
+      width: 20%;
+    }
+  }
+
+  .lc-img-container {
+    height: 300px !important;
+    object-fit: fill;
+    img {
+      height: 80%;
+    }
+  }
+
+  .menu {
+    border-radius: 0px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .pink-button {
+      width: 300px;
+      margin-top: 70px;
+      margin-left: 40%;
+      margin-bottom: 30px;
+    }
+  }
+  .menu-title {
+    width: 100%;
   }
 }
