@@ -127,7 +127,7 @@ header i {
 .location-form i {
   font-weight: 900;
   position: absolute;
-  left: 44%;
+  left: 20%;
   top: 74px;
 }
 .location-form ::placeholder {
@@ -137,6 +137,16 @@ header i {
   font-weight: bold;
 }
 
+@media (min-width: 768px) {
+  .location-form i {
+    left: 36%;
+  }
+}
+@media (min-width: 1093px) {
+  .location-form i {
+    left: 40%;
+  }
+}
 .step {
   margin-bottom: 20px;
 }
