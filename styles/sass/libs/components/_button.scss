@@ -44,12 +44,12 @@
     background: transparent;
     z-index: 2;
     opacity: 1;
-    transition: 0.4s;
+    transition: 3s;
     &:hover {
       opacity: 0.1;
     }
     &:hover ~ .fas {
-      transition: 0.4s;
+      transition: 3s;
       background: -webkit-linear-gradient($primary, $secondary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

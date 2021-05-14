@@ -3,6 +3,7 @@
 
 .dish input {
   &:checked ~ .dish-infos {
+    transition: 1s;
     width: 255px !important;
     margin-right: 5px;
   }
@@ -10,11 +11,11 @@
     transform: rotate(360deg);
     right: 27px;
     opacity: 1;
-    transition: transform 0.2s;
+    transition: transform 1.3s, opacity 0.4s;
   }
 
   &:checked ~ .checkbox-container {
     transform: translateX(13px);
-    transition: transform 0.3s;
+    transition: transform 0.6s;
   }
 }
